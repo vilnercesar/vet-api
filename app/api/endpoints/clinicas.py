@@ -16,7 +16,7 @@ router = APIRouter(
 @router.post("/", response_model=clinica_schemas.Clinica, status_code=status.HTTP_201_CREATED)
 def create_clinica(clinica: clinica_schemas.ClinicaCreate, db: Session = Depends(get_db)):
     """
-    Endpoint para cadastrar uma nova clínica. [cite: 65]
+    Endpoint para cadastrar uma nova clínica. 
     """
     service = clinica_service.ClinicaService(db)
     return service.create_clinica(clinica)
@@ -24,7 +24,7 @@ def create_clinica(clinica: clinica_schemas.ClinicaCreate, db: Session = Depends
 @router.get("/", response_model=List[clinica_schemas.Clinica])
 def list_clinicas(db: Session = Depends(get_db)):
     """
-    Endpoint para listar todas as clínicas cadastradas. [cite: 66]
+    Endpoint para listar todas as clínicas cadastradas.
     """
     service = clinica_service.ClinicaService(db)
     return service.get_all_clinicas()
@@ -32,7 +32,7 @@ def list_clinicas(db: Session = Depends(get_db)):
 @router.get("/{clinica_id}", response_model=clinica_schemas.Clinica)
 def get_clinica(clinica_id: int, db: Session = Depends(get_db)):
     """
-    Endpoint para buscar uma clínica específica pelo seu ID. [cite: 67]
+    Endpoint para buscar uma clínica específica pelo seu ID. 
     """
     service = clinica_service.ClinicaService(db)
     db_clinica = service.get_clinica_by_id(clinica_id)
@@ -43,7 +43,7 @@ def get_clinica(clinica_id: int, db: Session = Depends(get_db)):
 @router.get("/{clinica_id}/veterinarios", response_model=List[veterinario_schemas.Veterinario])
 def get_clinica_veterinarios(clinica_id: int, db: Session = Depends(get_db)):
     """
-    Endpoint para listar todos os veterinários de uma clínica específica. [cite: 68]
+    Endpoint para listar todos os veterinários de uma clínica específica. 
     """
     service = clinica_service.ClinicaService(db)
     if not service.get_clinica_by_id(clinica_id):

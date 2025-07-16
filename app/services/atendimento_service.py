@@ -1,10 +1,11 @@
 # veterinaria/services/atendimento_service.py
 from sqlalchemy.orm import Session
-from ..repositories import AtendimentoRepository, PetRepository, VeterinarioRepository
-from ..schemas import atendimento_schemas
-from ..models import models
 from fastapi import HTTPException, status
-
+from app.repositories.atendimento_repository import AtendimentoRepository
+from app.repositories.pet_repository import PetRepository
+from app.repositories.veterinario_repository import VeterinarioRepository
+from app.schemas import atendimento_schemas
+from app.models import models
 class AtendimentoService:
     def __init__(self, db: Session):
         self.repo = AtendimentoRepository(db)
