@@ -7,7 +7,6 @@
 
 API RESTful desenvolvida para gerir uma rede de clínicas veterinárias, permitindo o cadastro e a gestão de clínicas, veterinários, tutores, pets e seus respectivos atendimentos.
 
-Este projeto foi estruturado seguindo as melhores práticas de desenvolvimento, com uma arquitetura em camadas bem definida para garantir a separação de responsabilidades, manutenibilidade e escalabilidade.
 
 ## Tecnologias Utilizadas
 
@@ -64,7 +63,7 @@ Siga os passos abaixo para configurar e executar o projeto localmente.
 ### 2. Clonar o Repositório
 
 ```bash
-git clone [https://github.com/seu-usuario/vet-api.git](https://github.com/seu-usuario/vet-api.git)
+git clone https://github.com/vilnercesar/vet-api.git
 cd vet-api
 ```
 
@@ -120,11 +119,11 @@ Com o ambiente configurado, inicie o servidor FastAPI com o Uvicorn.
 uvicorn app.main:app --reload
 ```
 
-O servidor estará a correr e acessível em `http://127.0.0.1:8000`. A opção `--reload` faz com que o servidor reinicie automaticamente após qualquer alteração no código.
+O servidor estará rodando e acessível em `http://127.0.0.1:8000`. A opção `--reload` faz com que o servidor reinicie automaticamente após qualquer alteração no código.
 
 ## Utilizar a API
 
-Após iniciar a aplicação, a documentação interativa (Swagger UI) estará disponível automaticamente. Aceda ao seguinte URL no seu navegador para ver e testar todos os endpoints:
+Após iniciar a aplicação, a documentação interativa (Swagger UI) estará disponível automaticamente. Acesse ao seguinte URL no seu navegador para ver e testar todos os endpoints:
 
 **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**
 
